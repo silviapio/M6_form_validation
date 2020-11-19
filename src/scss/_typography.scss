@@ -1,0 +1,94 @@
+body {
+    font-family: $font-normal;
+}
+
+.navbar {
+    font-family: $font-deco;
+
+    &-brand {
+        font-size: 2em;
+
+        @include media-breakpoint-down(xs) { //sets the navbar-brand font size fit for xs viewports
+            font-size: 1.7em;
+        }
+    }
+
+    &-nav {
+        font-family: $font-normal;
+        font-size: 1em;
+    }
+
+    &-toggler {
+        font-size: 20px;
+    }
+
+    & .btn.btn-outline-success {
+        font-family: $font-normal;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 14px;
+        }        
+    }
+}
+
+@media (max-width: 310px) {
+    .navbar-brand {
+        font-size: 1.3em;
+    }
+}
+
+#md-header-body {
+    h1 {
+    font-size: 2em;
+    }
+
+    p {
+        @include media-breakpoint-down(xs) {
+            font-size: 0.85em;
+        }
+    }
+
+}
+
+#sm-header-body {
+    h4 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.85em;
+    }
+}
+
+#cards-container {
+    h3 {
+        font-family: $font-deco;
+        font-size: 1.7em;
+    }
+
+    p {
+        font-size: 0.85em;
+    }
+}
+
+#contact-carous-container {
+    h3 {
+        font-family: $font-deco;
+        font-size: 1.7em;
+    }
+    p {
+        font-size: 0.85em;
+    }
+    ul {
+        list-style: none;
+        font-size: 0.85em;
+    }
+}
+
+.carousel-caption {
+    font-size: 0.8em;
+}
+
+.footer {
+    font-size: 0.85em;
+}

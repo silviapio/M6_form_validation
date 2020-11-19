@@ -1,0 +1,7 @@
+@mixin lightToDark {
+    background-image: linear-gradient($gray-bg-header, $dark-3, $dark-4);
+}
+
+@mixin darkToLight {
+    background-image: linear-gradient($dark-4, $dark-3, $gray-bg-header);
+}

@@ -1,0 +1,257 @@
+//variable overrides
+//these variables definitions have to be placed here because I will use them to override bootstrap variables
+$dark-5: #2c2c2c;
+$dark-4: #373a40;
+$dark-3: #686d76;
+$dark-2: #99a8b2;
+$dark-1: #d3d1d1;
+
+$body-bg: $dark-5;
+$body-color: $dark-1;
+$primary: $body-color;
+$success: $dark-2;
+
+//import Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//import other custom scss files
+@import "./customvariables";
+@import "./mixins";
+@import "./typography"; 
+
+//define custom scss styles as usual
+/*body {
+    background-color: $body-bg;
+    color: $body-color;
+    font-family: $font-normal;
+}*/
+
+* {
+    box-sizing: border-box;
+}
+
+.modal-content {
+    .modal-title,
+    label,
+    a {
+        color: $dark-4;
+    }
+}
+
+.navbar {
+    background-color: $dark-4;
+
+    & button {
+        color: $primary;
+    }
+
+    & .navbar-toggler:focus {
+        outline: none;
+    }
+
+    & .btn.btn-outline-success {
+        border: 1.5px solid;
+    }
+
+    & .btn.btn-outline-success:hover {
+        background-color: $dark-1;
+    }
+}
+
+#header-container{
+    border: none;
+    border-radius: 0;
+    background-color: $gray-bg-header;
+
+    & .card-img-top {
+        max-height: 350px;
+        min-height: 110px;
+        border: none;
+        border-radius: 0;
+    }
+    
+    & .card-body {
+        @include lightToDark;
+
+        @include media-breakpoint-down(xs) {
+            padding-bottom: 5px;
+        }
+    }
+}
+
+#md-header-body {
+    display: none;
+
+    h1, p {
+        margin-left: 0;
+        max-width: 75%;
+        color: $dark-1;
+        -webkit-animation: 
+        text-appearing 2s ease-in-out;
+                animation: 
+        text-appearing 2s ease-in-out;
+    }
+}
+
+@-webkit-keyframes text-appearing {
+    from { opacity: 0;
+    width: 20% }
+    to { opacity: 1;
+    width: 100% }
+}
+
+@keyframes text-appearing {
+    from { opacity: 0;
+    width: 20% }
+    to { opacity: 1;
+    width: 100% }
+}
+
+#sm-header-body {
+    h4{
+        color: $dark-5;
+    }
+}
+
+#cards-container {
+    background-color: $dark-4;
+    padding: 15px;
+
+    .card, .card-img-bottom {
+        background-color: $dark-4;
+        border: none;
+        border-radius: 0;
+    }
+
+    .card-img-bottom {
+        height: 100%;
+    }
+}
+
+#contact-carous-container {
+    @include darkToLight;
+
+    .card, .carousel {
+        border: none;
+        border-radius: 0;
+    }
+
+    .card {
+        background: transparent;
+    }
+
+    .ul {
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
+
+#carouselExampleControls:hover {
+    cursor: pointer;
+}
+
+#carouselExampleControls {
+    min-height: 180px;
+
+    img,
+    div {
+        min-height: 180px;
+        overflow: hidden;
+    }
+
+    .carousel-caption {
+        padding: 0;
+        bottom: 0;
+
+        @include media-breakpoint-down(xs) { //fixes the carousel captions for xs viewports
+            display: flex !important;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+}
+
+footer .nav-link {
+    padding: 3px 15px;
+}
+
+
+@include media-breakpoint-down(xs) {
+    #cards-container .card {
+        //fixes padding for xs viewports, includes grandient 'darkToLight' and gives the effect of an horizontal line on bottom
+        padding-top: 12px;
+        padding-bottom: 3px;
+        @include darkToLight;
+    }
+
+    .carousel-caption {
+        //fixes the carousel captions for xs viewports
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #generalContainer {
+        //eliminates the padding for sm and xs viewports
+        padding: 0; 
+    }
+
+    .navbar-expand-md {
+        padding: 8px 12px;
+
+        .navbar-brand {
+            margin-right: 2px;
+        }
+
+        #signInMd {
+            display: none;
+        }
+
+        #signInSm {
+            padding: 2px 4px 2px 4px;
+            border: 1px solid $dark-3; 
+        }
+
+        .navbar-toggler {
+            margin-left: 4px;
+            padding: 5px 0px 2px 0px;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    #signInSm {
+        display: none;
+    }
+
+    #md-header-body{
+        //needed for the animation of the header
+        display: block;
+    }
+
+    #sm-header-body{
+        //needed for the animation of the header
+        display: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    #cards-container .card {
+        //gives some padding between cards for sm and md viewports
+        padding-bottom: 15px;
+    }
+}
+
+
+@include media-breakpoint-up(lg) {
+    #carouselExampleControls {
+        //fixes position for the carousel
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
