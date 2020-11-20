@@ -36,6 +36,18 @@ $success: $dark-2;
     a {
         color: $dark-4;
     }
+
+    #registration-lead {
+        color: $dark-4;
+
+        mark{
+            background-color: $dark-1;
+        }
+
+        a {
+            color: $dark-5;
+        }
+    }
 }
 
 .navbar {
