@@ -14,3 +14,4 @@ Form para registro con campos: First name, Family name, Email, Password, Repeat 
 City y Zip no son obligatorios.  La validación se ejecuta cada vez que el usuario apreta el botón Register.  Si hay un error, el submit se interrumpe y cuando el usuario se posiciona en un campo y sale (blur), el mensaje de error desaparece.  El formulario se limpia cuando el usuario apreta el botón Clear.  El código JS se encuentra en src/js/validationRegister.js .
 ## Deploy
 El deployment se encuentra en este enlace: 
+https://silviapio.github.io/M6_form_validation/
