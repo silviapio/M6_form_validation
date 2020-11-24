@@ -20,11 +20,6 @@ $success: $dark-2;
 @import "./typography"; 
 
 //define custom scss styles as usual
-/*body {
-    background-color: $body-bg;
-    color: $body-color;
-    font-family: $font-normal;
-}*/
 
 * {
     box-sizing: border-box;
@@ -35,6 +30,18 @@ $success: $dark-2;
     label,
     a {
         color: $dark-4;
+    }
+
+    #registration-lead {
+        color: $dark-4;
+
+        mark{
+            background-color: $dark-1;
+        }
+
+        a {
+            color: $dark-5;
+        }
     }
 }
 

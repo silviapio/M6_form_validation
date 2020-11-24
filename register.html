@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- meta tags required for Bootstrap -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Trispace:wght@300;400;500&display=swap"
+          rel="stylesheet">
+      
+        <!-- Font awesome-->
+        <script src="https://kit.fontawesome.com/d3efba6e8a.js" crossorigin="anonymous"></script>
+      
+        <!-- Bootstrap and custom styles -->
+        <link rel="stylesheet" href="./src/css/custom.css">
+        <title>Registration Page</title>
+      </head>
+<body>
+
+    <header>
+        <div class="container my-4">
+            <h1>Welcome to the editing community</h1>
+            <lead>We are thrilled to see you here. Please fill in the form to register.</lead>
+        </div>
+    </header>
+
+    <form action="" class="container" method="POST" onsubmit="return validateRegister()" id="registrationForm"
+        name="registrationForm" novalidate>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName1">First Name</label>
+                    <input type="text" class="form-control" id="inputName1">
+                    <div class="invalid-feedback" id="errorInputName1"></div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputName2">Family Name</label>
+                    <input type="text" class="form-control" id="inputName2">
+                    <div class="invalid-feedback" id="errorInputName2"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmailReg">Email</label>
+                <input type="text" class="form-control" id="inputEmailReg">
+                <div class="invalid-feedback" id="errorEmailReg"></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword">
+                    <div class="invalid-feedback" id="errorPassword"></div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="repeatPassword">Repeat Password</label>
+                    <input type="password" class="form-control" id="repeatPassword">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputCountry">Country</label>
+                    <select id="inputCountry" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>Austria AT </option>
+                        <option>Belgium BE </option>
+                        <option>Bulgaria BG </option>
+                        <option>Croatia HR </option>
+                        <option>Cyprus CY </option>
+                        <option>Czech Republic CZ </option>
+                        <option>Denmark DK </option>
+                        <option>Estonia EE </option>
+                        <option>Finland FI </option>
+                        <option>France FR </option>
+                        <option>Germany DE </option>
+                        <option>Greece GR </option>
+                        <option>Hungary HU </option>
+                        <option>Ireland, Republic of (EIRE) IE </option>
+                        <option>Italy IT </option>
+                        <option>Latvia LV </option>
+                        <option>Lithuania LT </option>
+                        <option>Luxembourg LU </option>
+                        <option>Malta MT </option>
+                        <option>Netherlands NL </option>
+                        <option>Poland PL </option>
+                        <option>Portugal PT </option>
+                        <option>Romania RO </option>
+                        <option>Slovakia SK </option>
+                        <option>Slovenia SI </option>
+                        <option>Spain ES </option>
+                        <option>Sweden SE </option>
+                        <option>United Kingdom GB </option>
+                    </select>
+                    <div class="invalid-feedback" id="errorCountry"></div>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">Zip Code</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="termsCheck" value="check">
+                    <label class="form-check-label" for="termsCheck">
+                        I agree to this website's Terms and Conditions.
+                    </label>
+                    <div class="invalid-feedback" id="errorTerms"></div>
+                </div>
+            </div>
+        <button type="submit" class="btn btn-primary m-1">Register</button>
+        <button type="button" class="btn btn-secondary btn-sm m-1" id="resetData">Clear data</button>
+    </form>
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    
+    <!-- Custom JavaScript-->
+    <script src="./src/js/validationRegister.js"></script>
+
+</body>
+</html>

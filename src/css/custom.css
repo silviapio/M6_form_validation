@@ -7218,11 +7218,6 @@ body {
 .footer {
   font-size: 0.85em; }
 
-/*body {
-    background-color: $body-bg;
-    color: $body-color;
-    font-family: $font-normal;
-}*/
 * {
   box-sizing: border-box; }
 
@@ -7230,6 +7225,13 @@ body {
 .modal-content label,
 .modal-content a {
   color: #373a40; }
+
+.modal-content #registration-lead {
+  color: #373a40; }
+  .modal-content #registration-lead mark {
+    background-color: #d3d1d1; }
+  .modal-content #registration-lead a {
+    color: #2c2c2c; }
 
 .navbar {
   background-color: #373a40; }
